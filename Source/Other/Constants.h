@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  ViewController.h
 //  Expentrace
 //
 //  Created by RHVT on 5/5/19.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface Constants : NSObject
 
++(NSString *)apiConstant;
 
 @end
 

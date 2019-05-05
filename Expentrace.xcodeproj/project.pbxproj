@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C847B2D227ECB5100D46B86 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B28227ECB5000D46B86 /* FirstViewController.m */; };
 		2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B29227ECB5000D46B86 /* AppDelegate.m */; };
 		2C847B2F227ECB5100D46B86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B2B227ECB5000D46B86 /* main.m */; };
-		2C847B30227ECB5100D46B86 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B2C227ECB5100D46B86 /* SecondViewController.m */; };
 		2C847B39227ECB7A00D46B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C847B34227ECB7A00D46B86 /* LaunchScreen.storyboard */; };
 		2C847B3A227ECB7A00D46B86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C847B36227ECB7A00D46B86 /* Main.storyboard */; };
 		2C847B3B227ECB7A00D46B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C847B38227ECB7A00D46B86 /* Assets.xcassets */; };
+		2C847B67227ECF7900D46B86 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B61227ECF7900D46B86 /* Constants.m */; };
+		2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */; };
+		2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */; };
+		2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B70227ED45F00D46B86 /* AddEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C847B0A227ECAB100D46B86 /* Expentrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expentrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C847B26227ECB5000D46B86 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		2C847B27227ECB5000D46B86 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2C847B28227ECB5000D46B86 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		2C847B29227ECB5000D46B86 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C847B2A227ECB5000D46B86 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C847B2B227ECB5000D46B86 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2C847B2C227ECB5100D46B86 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2C847B35227ECB7A00D46B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C847B37227ECB7A00D46B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		2C847B38227ECB7A00D46B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C847B3C227ECB9500D46B86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C847B61227ECF7900D46B86 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		2C847B64227ECF7900D46B86 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		2C847B6B227ED0CB00D46B86 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		2C847B6D227ED45F00D46B86 /* AddEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditViewController.h; sourceTree = "<group>"; };
+		2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
+		2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
+		2C847B70227ED45F00D46B86 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +70,13 @@
 		2C847B31227ECB5800D46B86 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2C847B60227ECF7900D46B86 /* Other */,
+				2C847B5F227ECF7100D46B86 /* View */,
+				2C847B55227ECF2600D46B86 /* Model */,
+				2C847B42227ECEBC00D46B86 /* ViewController */,
 				2C847B2A227ECB5000D46B86 /* AppDelegate.h */,
 				2C847B29227ECB5000D46B86 /* AppDelegate.m */,
-				2C847B26227ECB5000D46B86 /* FirstViewController.h */,
-				2C847B28227ECB5000D46B86 /* FirstViewController.m */,
 				2C847B2B227ECB5000D46B86 /* main.m */,
-				2C847B27227ECB5000D46B86 /* SecondViewController.h */,
-				2C847B2C227ECB5100D46B86 /* SecondViewController.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -82,6 +88,42 @@
 				2C847B36227ECB7A00D46B86 /* Main.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		2C847B42227ECEBC00D46B86 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C847B6D227ED45F00D46B86 /* AddEditViewController.h */,
+				2C847B70227ED45F00D46B86 /* AddEditViewController.m */,
+				2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */,
+				2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */,
+				2C847B6B227ED0CB00D46B86 /* SummaryViewController.h */,
+				2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C847B55227ECF2600D46B86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C847B5F227ECF7100D46B86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C847B60227ECF7900D46B86 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2C847B61227ECF7900D46B86 /* Constants.m */,
+				2C847B64227ECF7900D46B86 /* Constants.h */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C847B30227ECB5100D46B86 /* SecondViewController.m in Sources */,
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
-				2C847B2D227ECB5100D46B86 /* FirstViewController.m in Sources */,
+				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
+				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
+				2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */,
+				2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

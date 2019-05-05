@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  ViewController.m
 //  Expentrace
 //
 //  Created by RHVT on 5/5/19.
 //  Copyright © 2019 R. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "SummaryViewController.h"
 
-@interface SecondViewController ()
+@interface SummaryViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation SummaryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

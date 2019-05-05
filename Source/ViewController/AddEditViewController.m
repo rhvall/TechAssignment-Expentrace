@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  ViewController.m
 //  Expentrace
 //
 //  Created by RHVT on 5/5/19.
 //  Copyright © 2019 R. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "AddEditViewController.h"
 
-@interface FirstViewController ()
+@interface AddEditViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation AddEditViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
