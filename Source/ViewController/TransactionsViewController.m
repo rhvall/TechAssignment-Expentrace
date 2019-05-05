@@ -7,6 +7,7 @@
 //
 
 #import "TransactionsViewController.h"
+#import "Constants.h"
 
 @interface TransactionsViewController ()
 
@@ -14,10 +15,23 @@
 
 @implementation TransactionsViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
+    [self requestJSON];
     // Do any additional setup after loading the view.
 }
 
+-(NSString *)requestJSON {
+    NSURL *baseURL = [Constants currencyLiveURL];
+    NSURLComponents *urlComp = [[NSURLComponents alloc] initWithURL:baseURL
+                                     resolvingAgainstBaseURL:NO];
+    NSURLQueryItem *activeKey = [[NSURLQueryItem alloc] initWithName:[Constants accessKeyComponent]
+                                                         value:[Constants apiAccessKey]];
+    [urlComp setQueryItems:@[activeKey]];
+    NSData *data = [NSData dataWithContentsOfURL:[urlComp URL]];
+    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", ret);
+    return ret;
+}
 
 @end

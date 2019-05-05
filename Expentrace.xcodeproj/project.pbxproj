@@ -120,8 +120,8 @@
 		2C847B60227ECF7900D46B86 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				2C847B61227ECF7900D46B86 /* Constants.m */,
 				2C847B64227ECF7900D46B86 /* Constants.h */,
+				2C847B61227ECF7900D46B86 /* Constants.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";

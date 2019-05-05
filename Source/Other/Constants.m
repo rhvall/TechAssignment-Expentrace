@@ -14,8 +14,21 @@
 
 @implementation Constants
 
-+(NSString *)apiConstant {
-    return @"Constant";
++(NSString *)apiAccessKey {
+    /*
+     Replace bellow with your own access key
+    */
+    return @"----";
+}
+
++(NSString *)accessKeyComponent {
+    return @"access_key";
+}
+
+
++(NSURL *)currencyLiveURL {
+    NSString *baseURLString = @"http://www.apilayer.net/api/live";
+    return [NSURL URLWithString:baseURLString];
 }
 
 @end

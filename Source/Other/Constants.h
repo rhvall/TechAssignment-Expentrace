@@ -10,7 +10,9 @@
 
 @interface Constants : NSObject
 
-+(NSString *)apiConstant;
++(NSString *)apiAccessKey;
++(NSString *)accessKeyComponent;
++(NSURL *)currencyLiveURL;
 
 @end
 
