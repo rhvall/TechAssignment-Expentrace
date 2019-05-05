@@ -23,12 +23,7 @@
 
 -(NSString *)requestJSON {
     NSURL *baseURL = [Constants currencyLiveURL];
-    NSURLComponents *urlComp = [[NSURLComponents alloc] initWithURL:baseURL
-                                     resolvingAgainstBaseURL:NO];
-    NSURLQueryItem *activeKey = [[NSURLQueryItem alloc] initWithName:[Constants accessKeyComponent]
-                                                         value:[Constants apiAccessKey]];
-    [urlComp setQueryItems:@[activeKey]];
-    NSData *data = [NSData dataWithContentsOfURL:[urlComp URL]];
+    NSData *data = [NSData dataWithContentsOfURL:baseURL];
     NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@", ret);
     return ret;

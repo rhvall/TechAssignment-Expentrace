@@ -14,20 +14,8 @@
 
 @implementation Constants
 
-+(NSString *)apiAccessKey {
-    /*
-     Replace bellow with your own access key
-    */
-    return @"----";
-}
-
-+(NSString *)accessKeyComponent {
-    return @"access_key";
-}
-
-
 +(NSURL *)currencyLiveURL {
-    NSString *baseURLString = @"http://www.apilayer.net/api/live";
+    NSString *baseURLString = @"https://api.exchangeratesapi.io/latest?base=USD";
     return [NSURL URLWithString:baseURLString];
 }
 
