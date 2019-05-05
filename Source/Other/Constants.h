@@ -11,6 +11,8 @@
 @interface Constants : NSObject
 
 +(NSURL *)currencyLiveURL;
++(NSString *)usdKey;
++(NSString *)nzdKey;
 
 @end
 

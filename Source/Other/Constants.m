@@ -19,4 +19,12 @@
     return [NSURL URLWithString:baseURLString];
 }
 
++(NSString *)usdKey {
+    return @"USD";
+}
+
++(NSString *)nzdKey {
+    return @"NZD";
+}
+
 @end
