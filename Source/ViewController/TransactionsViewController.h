@@ -10,6 +10,5 @@
 
 @interface TransactionsViewController : UIViewController
 
-
 @end
 

@@ -16,6 +16,7 @@
 		2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */; };
 		2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */; };
 		2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B70227ED45F00D46B86 /* AddEditViewController.m */; };
+		2C847B75227EE74900D46B86 /* TransactionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* TransactionsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
 		2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
 		2C847B70227ED45F00D46B86 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditViewController.m; sourceTree = "<group>"; };
+		2C847B73227EE74900D46B86 /* TransactionsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsModel.h; sourceTree = "<group>"; };
+		2C847B74227EE74900D46B86 /* TransactionsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 		2C847B55227ECF2600D46B86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C847B73227EE74900D46B86 /* TransactionsModel.h */,
+				2C847B74227EE74900D46B86 /* TransactionsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,8 +125,8 @@
 		2C847B60227ECF7900D46B86 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				2C847B61227ECF7900D46B86 /* Constants.m */,
 				2C847B64227ECF7900D46B86 /* Constants.h */,
+				2C847B61227ECF7900D46B86 /* Constants.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			files = (
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
+				2C847B75227EE74900D46B86 /* TransactionsModel.m in Sources */,
 				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
 				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
 				2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */,

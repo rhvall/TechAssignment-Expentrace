@@ -14,8 +14,21 @@
 
 @implementation Constants
 
-+(NSString *)apiConstant {
-    return @"Constant";
++(NSURL *)currencyLiveURL {
+    NSString *baseURLString = @"https://api.exchangeratesapi.io/latest?base=USD";
+    return [NSURL URLWithString:baseURLString];
+}
+
++(NSString *)usdKey {
+    return @"USD";
+}
+
++(NSString *)ratesKey {
+    return @"rates";
+}
+
++(NSString *)nzdKey {
+    return @"NZD";
 }
 
 @end
