@@ -23,6 +23,10 @@
     return @"USD";
 }
 
++(NSString *)ratesKey {
+    return @"rates";
+}
+
 +(NSString *)nzdKey {
     return @"NZD";
 }
