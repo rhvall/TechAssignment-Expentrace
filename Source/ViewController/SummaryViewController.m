@@ -7,6 +7,8 @@
 //
 
 #import "SummaryViewController.h"
+#import "Expentrace-Bridging-Header.h"
+#import "JSONParsing.h"
 
 @interface SummaryViewController ()
 
@@ -14,9 +16,18 @@
 
 @implementation SummaryViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Test correct loading of the JSON file
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/rval735/Expentrace/AddModels/Assets/data.json"];
+        NSData *dta = [JSONParsing requestJSON:url];
+        NSArray *dic = [JSONParsing parseJSONArray:dta];
+        NSLog(@"Dic: %@", dic);
+    });
+    
 }
 
 
