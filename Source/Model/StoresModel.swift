@@ -58,4 +58,8 @@ class StoreElement: NSObject, Codable {
         
         return StoreElement(sID, sNam, sAdr, sLat, sLon, sDis, sFet)
     }
+    
+    @objc func getName() -> String {
+        return storeName
+    }
 }
