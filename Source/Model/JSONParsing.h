@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TransactionsModel : UIViewController
+@interface JSONParsing : NSObject
 
 // This function does a simple URL request to the constant using Foundation's
 // method "NSData dataWithContentsOfURL", it is not the most efficient nor
@@ -16,8 +16,10 @@
 // time for this project
 +(NSData *)requestJSON:(NSURL *)baseURL;
 
-// Receives data in JSON format, and tries to parse it into a NSDictionary
-+(NSDictionary *)parseJSON:(NSData *)jsonDta;
+// Receives data in JSON format, and tries to parse it into a NSArray
++(NSArray *)parseJSONArray:(NSData *)jsonDta;
 
+// Receives data in JSON format, and tries to parse it into a NSDictionary
++(NSDictionary *)parseJSONDictionary:(NSData *)jsonDta;
 @end
 

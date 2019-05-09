@@ -16,7 +16,7 @@
 		2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */; };
 		2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */; };
 		2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B70227ED45F00D46B86 /* AddEditViewController.m */; };
-		2C847B75227EE74900D46B86 /* TransactionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* TransactionsModel.m */; };
+		2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* JSONParsing.m */; };
 		2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97272284107000FDA56E /* FavoritesModel.swift */; };
 		2CFE972A2284116600FDA56E /* StoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97292284116600FDA56E /* StoresModel.swift */; };
 /* End PBXBuildFile section */
@@ -38,8 +38,8 @@
 		2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
 		2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
 		2C847B70227ED45F00D46B86 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditViewController.m; sourceTree = "<group>"; };
-		2C847B73227EE74900D46B86 /* TransactionsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsModel.h; sourceTree = "<group>"; };
-		2C847B74227EE74900D46B86 /* TransactionsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsModel.m; sourceTree = "<group>"; };
+		2C847B73227EE74900D46B86 /* JSONParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParsing.h; sourceTree = "<group>"; };
+		2C847B74227EE74900D46B86 /* JSONParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParsing.m; sourceTree = "<group>"; };
 		2CFE97262284106F00FDA56E /* Expentrace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expentrace-Bridging-Header.h"; sourceTree = "<group>"; };
 		2CFE97272284107000FDA56E /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		2CFE97292284116600FDA56E /* StoresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresModel.swift; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 			children = (
 				2CFE97292284116600FDA56E /* StoresModel.swift */,
 				2CFE97272284107000FDA56E /* FavoritesModel.swift */,
-				2C847B73227EE74900D46B86 /* TransactionsModel.h */,
-				2C847B74227EE74900D46B86 /* TransactionsModel.m */,
+				2C847B73227EE74900D46B86 /* JSONParsing.h */,
+				2C847B74227EE74900D46B86 /* JSONParsing.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			files = (
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
-				2C847B75227EE74900D46B86 /* TransactionsModel.m in Sources */,
+				2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */,
 				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
 				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
 				2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */,
