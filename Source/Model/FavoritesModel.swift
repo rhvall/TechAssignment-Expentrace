@@ -1,5 +1,5 @@
 //
-//  Favorites.swift
+//  FavoritesModel.swift
 //  Expentrace
 //
 //  Created by RHVT on 9/5/19.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+struct FavoritesModel {
+    let favID : UInt
+    let favName : String
+}

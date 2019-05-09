@@ -7,8 +7,9 @@
 //
 
 #import "SummaryViewController.h"
-#import "Expentrace-Bridging-Header.h"
 #import "JSONParsing.h"
+#import "Constants.h"
+#import "Expentrace-Swift.h"
 
 @interface SummaryViewController ()
 
@@ -18,17 +19,28 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
+    [SummaryViewController loadDataFromServer:nil];
+}
+
++(void)loadDataFromServer:(void(^)(NSArray *))callWhenFinished {
     // Test correct loading of the JSON file
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
-        NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/rval735/Expentrace/AddModels/Assets/data.json"];
-        NSData *dta = [JSONParsing requestJSON:url];
-        NSArray *dic = [JSONParsing parseJSONArray:dta];
-        NSLog(@"Dic: %@", dic);
+        NSData *dta = [JSONParsing requestJSON:[Constants storesURL]];
+        NSArray *json = [JSONParsing parseJSONArray:dta];
+        StoreElement *st = [StoreElement parseStoreElementWithDic:[json objectAtIndex:0]];
+        NSLog(@"st: %@", st);
+        // If we send on the BG task, it is possible to break the app, so it
+        // has to be performed on main
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (callWhenFinished != nil) {
+                callWhenFinished(json);
+            }
+        });
     });
-    
 }
 
-
+-(void)updateStoreElements:(NSArray *)elements {
+    
+}
 @end
