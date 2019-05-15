@@ -1,0 +1,42 @@
+[
+    {
+        "id": 13939,
+        "name": "Test Restaurant 13939",
+        "address": "東京都練馬区田柄３－１０－１１",
+        "latitude": 35.659342,
+        "longitude": 139.744058,
+        "distance": 3219,
+        "featureList": [
+            "FREE_WIFI",
+            "DRIVETHR",
+            "MCCAFE",
+            "BP",
+            "MCADVENT",
+            "BF",
+            "TABLE_DELIVERY"
+        ]
+    },
+    {
+        "id": 9003,
+        "name": "Test Restaurant 9003 (UE Lab)",
+        "address": "栃木県足利市朝倉町２４５",
+        "latitude": 36.32073546568714,
+        "longitude": 139.44997919517115,
+        "distance": 76672,
+        "featureList": [
+            "BF"
+        ]
+    },
+    {
+        "id": 9004,
+        "name": "Test Restaurant 9004 (UE Lab)",
+        "address": "栃木県宇都宮市泉が丘１－１６－３３",
+        "latitude": 36.55961091189577,
+        "longitude": 139.91416719003658, 
+        "distance": 98630,
+        "featureList": [
+            "DRIVETHR",
+            "BF"
+        ]
+    }
+]

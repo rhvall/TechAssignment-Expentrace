@@ -6,14 +6,14 @@
 //  Copyright © 2019 R. All rights reserved.
 //
 
-#import "TransactionsModel.h"
+#import "JSONParsing.h"
 #import "Constants.h"
 
-@interface TransactionsModel ()
+@interface JSONParsing ()
 
 @end
 
-@implementation TransactionsModel
+@implementation JSONParsing
 
 // This function does a simple URL request to the constant using Foundation's
 // method "NSData dataWithContentsOfURL", it is not the most efficient nor
@@ -24,14 +24,13 @@
 }
 
 // Receives data in JSON format, and tries to parse it into a NSDictionary
-+(NSDictionary *)parseJSON:(NSData *)jsonDta {
-    NSError *jsonError;
-    id allKeys = [NSJSONSerialization JSONObjectWithData:jsonDta
-                                            options:NSJSONReadingMutableContainers
-                                              error:&jsonError];
++(NSDictionary *)parseJSONDictionary:(NSData *)jsonDta {
     
-    if (jsonError != nil) {
-        NSLog(@"Error at time of retrieving exchange data: %@", jsonError);
+    id allKeys = [self transformToJSON:jsonDta];
+    
+    if ([allKeys isKindOfClass:[NSDictionary class]] == false) {
+        // To avoid crashing, this function will make sure the parsed
+        // JSON object is a dictionary, otherwise it will return nil
         return nil;
     }
     
@@ -54,6 +53,34 @@
     
     // Return a simple NSDictionary instead of the mutable version we used inside this function
     return [mutDic copy];
+}
+
++(NSArray *)parseJSONArray:(NSData *)jsonDta {
+    
+    id allKeys = [self transformToJSON:jsonDta];
+    
+    if ([allKeys isKindOfClass:[NSArray class]] == false) {
+        // To avoid crashing, this function will make sure the parsed
+        // JSON object is an array, otherwise it will return nil
+        return nil;
+    }
+    
+    return [allKeys copy];
+}
+
+// Single reponsability to parse data into a serialized JSON object
++(id)transformToJSON:(NSData *)jsonDta {
+    NSError *jsonError;
+    id serialized = [NSJSONSerialization JSONObjectWithData:jsonDta
+                                                 options:kNilOptions
+                                                   error:&jsonError];
+    
+    if (jsonError != nil) {
+        NSLog(@"Error at time of retrieving exchange data: %@", jsonError);
+        return nil;
+    }
+    
+    return serialized;
 }
 
 @end

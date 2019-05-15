@@ -16,7 +16,9 @@
 		2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */; };
 		2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */; };
 		2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B70227ED45F00D46B86 /* AddEditViewController.m */; };
-		2C847B75227EE74900D46B86 /* TransactionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* TransactionsModel.m */; };
+		2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* JSONParsing.m */; };
+		2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97272284107000FDA56E /* FavoritesModel.swift */; };
+		2CFE972A2284116600FDA56E /* StoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97292284116600FDA56E /* StoresModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +38,11 @@
 		2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
 		2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
 		2C847B70227ED45F00D46B86 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditViewController.m; sourceTree = "<group>"; };
-		2C847B73227EE74900D46B86 /* TransactionsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsModel.h; sourceTree = "<group>"; };
-		2C847B74227EE74900D46B86 /* TransactionsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsModel.m; sourceTree = "<group>"; };
+		2C847B73227EE74900D46B86 /* JSONParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParsing.h; sourceTree = "<group>"; };
+		2C847B74227EE74900D46B86 /* JSONParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParsing.m; sourceTree = "<group>"; };
+		2CFE97262284106F00FDA56E /* Expentrace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expentrace-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CFE97272284107000FDA56E /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
+		2CFE97292284116600FDA56E /* StoresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 				2C847B2A227ECB5000D46B86 /* AppDelegate.h */,
 				2C847B29227ECB5000D46B86 /* AppDelegate.m */,
 				2C847B2B227ECB5000D46B86 /* main.m */,
+				2CFE97262284106F00FDA56E /* Expentrace-Bridging-Header.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -109,8 +115,10 @@
 		2C847B55227ECF2600D46B86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C847B73227EE74900D46B86 /* TransactionsModel.h */,
-				2C847B74227EE74900D46B86 /* TransactionsModel.m */,
+				2CFE97292284116600FDA56E /* StoresModel.swift */,
+				2CFE97272284107000FDA56E /* FavoritesModel.swift */,
+				2C847B73227EE74900D46B86 /* JSONParsing.h */,
+				2C847B74227EE74900D46B86 /* JSONParsing.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 				TargetAttributes = {
 					2C847B09227ECAB100D46B86 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -203,9 +212,11 @@
 			files = (
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
-				2C847B75227EE74900D46B86 /* TransactionsModel.m in Sources */,
+				2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */,
 				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
 				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
+				2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */,
+				2CFE972A2284116600FDA56E /* StoresModel.swift in Sources */,
 				2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */,
 				2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */,
 			);
@@ -349,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +369,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.Expentrace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Expentrace-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -365,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,6 +389,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.r.Expentrace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Expentrace-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

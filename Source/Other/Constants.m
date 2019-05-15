@@ -19,6 +19,11 @@
     return [NSURL URLWithString:baseURLString];
 }
 
++(NSURL *)storesURL {
+    NSString *baseURLString = @"https://raw.githubusercontent.com/rval735/Expentrace/AddModels/Assets/data.json";
+    return [NSURL URLWithString:baseURLString];
+}
+
 +(NSString *)usdKey {
     return @"USD";
 }
