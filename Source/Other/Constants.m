@@ -19,9 +19,15 @@
     return [NSURL URLWithString:baseURLString];
 }
 
-+(NSURL *)storesURL {
-    NSString *baseURLString = @"https://raw.githubusercontent.com/rval735/Expentrace/AddModels/Assets/data.json";
-    return [NSURL URLWithString:baseURLString];
++(NSString *)transactionsFile {
+    return @"TransactionsRecord";
+}
+
++(NSString *)encryptionPass {
+    // This password should not be a simple constant
+    // hardcoded here, next step would be to have
+    // this stored on keychain
+    return @"encryptionPass";
 }
 
 +(NSString *)usdKey {
