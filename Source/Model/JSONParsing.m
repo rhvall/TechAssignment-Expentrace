@@ -57,6 +57,10 @@
 
 +(NSArray *)parseJSONArray:(NSData *)jsonDta {
     
+    if (jsonDta == nil) {
+        return nil;
+    }
+    
     id allKeys = [self transformToJSON:jsonDta];
     
     if ([allKeys isKindOfClass:[NSArray class]] == false) {
