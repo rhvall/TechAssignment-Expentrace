@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CC228CDCEC00B1D49C /* DownloadService.swift */; };
 		2C4667CF228CDE6700B1D49C /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CE228CDE6700B1D49C /* Download.swift */; };
+		2C4667D1228CE22900B1D49C /* FileMgmt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667D0228CE22900B1D49C /* FileMgmt.swift */; };
 		2C4667D3228D347E00B1D49C /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667D2228D347E00B1D49C /* DownloadManager.m */; };
 		2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B29227ECB5000D46B86 /* AppDelegate.m */; };
 		2C847B2F227ECB5100D46B86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B2B227ECB5000D46B86 /* main.m */; };
@@ -20,13 +21,13 @@
 		2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */; };
 		2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B70227ED45F00D46B86 /* AddEditViewController.m */; };
 		2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* JSONParsing.m */; };
-		2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97272284107000FDA56E /* FavoritesModel.swift */; };
-		2CFE972A2284116600FDA56E /* StoresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97292284116600FDA56E /* StoresModel.swift */; };
+		2CFE972A2284116600FDA56E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97292284116600FDA56E /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C4667CC228CDCEC00B1D49C /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		2C4667CE228CDE6700B1D49C /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		2C4667D0228CE22900B1D49C /* FileMgmt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMgmt.swift; sourceTree = "<group>"; };
 		2C4667D2228D347E00B1D49C /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		2C4667D4228D34D300B1D49C /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		2C847B0A227ECAB100D46B86 /* Expentrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expentrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +49,7 @@
 		2C847B73227EE74900D46B86 /* JSONParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParsing.h; sourceTree = "<group>"; };
 		2C847B74227EE74900D46B86 /* JSONParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParsing.m; sourceTree = "<group>"; };
 		2CFE97262284106F00FDA56E /* Expentrace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expentrace-Bridging-Header.h"; sourceTree = "<group>"; };
-		2CFE97272284107000FDA56E /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
-		2CFE97292284116600FDA56E /* StoresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresModel.swift; sourceTree = "<group>"; };
+		2CFE97292284116600FDA56E /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				2C4667CE228CDE6700B1D49C /* Download.swift */,
-				2CFE97292284116600FDA56E /* StoresModel.swift */,
-				2CFE97272284107000FDA56E /* FavoritesModel.swift */,
+				2CFE97292284116600FDA56E /* Transaction.swift */,
 				2C847B73227EE74900D46B86 /* JSONParsing.h */,
 				2C847B74227EE74900D46B86 /* JSONParsing.m */,
 			);
@@ -152,6 +151,7 @@
 		2C847B60227ECF7900D46B86 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				2C4667D0228CE22900B1D49C /* FileMgmt.swift */,
 				2C847B64227ECF7900D46B86 /* Constants.h */,
 				2C847B61227ECF7900D46B86 /* Constants.m */,
 			);
@@ -229,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4667D1228CE22900B1D49C /* FileMgmt.swift in Sources */,
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
 				2C4667CF228CDE6700B1D49C /* Download.swift in Sources */,
@@ -237,8 +238,7 @@
 				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
 				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
 				2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */,
-				2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */,
-				2CFE972A2284116600FDA56E /* StoresModel.swift in Sources */,
+				2CFE972A2284116600FDA56E /* Transaction.swift in Sources */,
 				2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */,
 				2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */,
 			);

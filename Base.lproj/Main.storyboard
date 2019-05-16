@@ -38,7 +38,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Summary" image="Summary" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="StoresTableView" destination="y3g-W4-Ygs" id="Hos-9a-Hs0"/>
+                        <outlet property="transactionsTableView" destination="y3g-W4-Ygs" id="1cu-7P-SoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
