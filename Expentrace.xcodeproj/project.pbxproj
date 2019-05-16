@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CC228CDCEC00B1D49C /* DownloadService.swift */; };
+		2C4667CF228CDE6700B1D49C /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CE228CDE6700B1D49C /* Download.swift */; };
+		2C4667D3228D347E00B1D49C /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667D2228D347E00B1D49C /* DownloadManager.m */; };
 		2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B29227ECB5000D46B86 /* AppDelegate.m */; };
 		2C847B2F227ECB5100D46B86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B2B227ECB5000D46B86 /* main.m */; };
 		2C847B39227ECB7A00D46B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C847B34227ECB7A00D46B86 /* LaunchScreen.storyboard */; };
@@ -22,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4667CC228CDCEC00B1D49C /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		2C4667CE228CDE6700B1D49C /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		2C4667D2228D347E00B1D49C /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		2C4667D4228D34D300B1D49C /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		2C847B0A227ECAB100D46B86 /* Expentrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expentrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C847B29227ECB5000D46B86 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C847B2A227ECB5000D46B86 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4667CB228CDCEC00B1D49C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C4667D4228D34D300B1D49C /* DownloadManager.h */,
+				2C4667D2228D347E00B1D49C /* DownloadManager.m */,
+				2C4667CC228CDCEC00B1D49C /* DownloadService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		2C847B01227ECAB100D46B86 = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +95,11 @@
 		2C847B31227ECB5800D46B86 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				2C847B60227ECF7900D46B86 /* Other */,
 				2C847B5F227ECF7100D46B86 /* View */,
 				2C847B55227ECF2600D46B86 /* Model */,
 				2C847B42227ECEBC00D46B86 /* ViewController */,
+				2C4667CB228CDCEC00B1D49C /* Network */,
+				2C847B60227ECF7900D46B86 /* Other */,
 				2C847B2A227ECB5000D46B86 /* AppDelegate.h */,
 				2C847B29227ECB5000D46B86 /* AppDelegate.m */,
 				2C847B2B227ECB5000D46B86 /* main.m */,
@@ -115,6 +133,7 @@
 		2C847B55227ECF2600D46B86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C4667CE228CDE6700B1D49C /* Download.swift */,
 				2CFE97292284116600FDA56E /* StoresModel.swift */,
 				2CFE97272284107000FDA56E /* FavoritesModel.swift */,
 				2C847B73227EE74900D46B86 /* JSONParsing.h */,
@@ -212,9 +231,12 @@
 			files = (
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
+				2C4667CF228CDE6700B1D49C /* Download.swift in Sources */,
+				2C4667D3228D347E00B1D49C /* DownloadManager.m in Sources */,
 				2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */,
 				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
 				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
+				2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */,
 				2CFE97282284107000FDA56E /* FavoritesModel.swift in Sources */,
 				2CFE972A2284116600FDA56E /* StoresModel.swift in Sources */,
 				2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */,

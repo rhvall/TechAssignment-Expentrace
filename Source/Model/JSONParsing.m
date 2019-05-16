@@ -9,19 +9,7 @@
 #import "JSONParsing.h"
 #import "Constants.h"
 
-@interface JSONParsing ()
-
-@end
-
 @implementation JSONParsing
-
-// This function does a simple URL request to the constant using Foundation's
-// method "NSData dataWithContentsOfURL", it is not the most efficient nor
-// best way to deal with network errors, but it is a shorcut given the alloted
-// time for this project
-+(NSData *)requestJSON:(NSURL *)baseURL {
-    return [NSData dataWithContentsOfURL:baseURL];
-}
 
 // Receives data in JSON format, and tries to parse it into a NSDictionary
 +(NSDictionary *)parseJSONDictionary:(NSData *)jsonDta {
@@ -56,6 +44,10 @@
 }
 
 +(NSArray *)parseJSONArray:(NSData *)jsonDta {
+    
+    if (jsonDta == nil) {
+        return nil;
+    }
     
     id allKeys = [self transformToJSON:jsonDta];
     
