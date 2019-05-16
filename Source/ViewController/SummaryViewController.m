@@ -74,7 +74,7 @@ numberOfRowsInSection:(NSInteger)section
     // Test correct loading of the JSON file
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
-        NSData *dta = [JSONParsing requestJSON:[Constants storesURL]];
+        NSData *dta = [JSONParsing syncRequestJSON:[Constants storesURL]];
         NSArray *json = [JSONParsing parseJSONArray:dta];
         if (callWhenFinished != nil) {
             callWhenFinished(json);

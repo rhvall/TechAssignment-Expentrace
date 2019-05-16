@@ -37,54 +37,68 @@ import Foundation
 // Allows cancel, pause, resume download.
 @objc class DownloadService: NSObject {
 
-  // SearchViewController creates downloadsSession
-  var downloadsSession: URLSession!
-  var activeDownloads: [URL: Download] = [:]
-    
-    @objc func setDownloadsSession(session: URLSession) {
-        self.downloadsSession = session
+    // SearchViewController creates downloadsSession
+    @objc var downloadsSession: URLSession!
+    var activeDownloads: [URL: Download] = [:]
+    @objc var completionHandler: ((URL) -> Void)?
+
+    // MARK: - Download methods called by ObjectToDownloadCell delegate methods
+
+    @objc func startDownload(_ otd: ObjectToDownload) {
+        // Create object
+        let download = Download(otd: otd)
+        // Add a download taskt with the URL
+        download.task = downloadsSession.downloadTask(with: otd.refURL)
+        // Start that task
+        download.task!.resume()
+        // Enable flag
+        download.isDownloading = true
+        // Add it to the dictionary of activeDownloads
+        activeDownloads[download.otd.refURL] = download
     }
 
-  // MARK: - Download methods called by ObjectToDownloadCell delegate methods
-
-  func startDownload(_ otd: ObjectToDownload) {
-    // 1
-    let download = Download(otd: otd)
-    // 2
-    download.task = downloadsSession.downloadTask(with: otd.refURL)
-    // 3
-    download.task!.resume()
-    // 4
-    download.isDownloading = true
-    // 5
-    activeDownloads[download.otd.refURL] = download
-  }
-
-  func pauseDownload(_ otd: ObjectToDownload) {
+    func pauseDownload(_ otd: ObjectToDownload) {
     guard let download = activeDownloads[otd.refURL] else { return }
     if download.isDownloading {
-      download.task?.cancel(byProducingResumeData: { data in
-        download.resumeData = data
-      })
-      download.isDownloading = false
+        download.task?.cancel(byProducingResumeData: { data in
+            download.resumeData = data
+        })
+        download.isDownloading = false
     }
-  }
+    }
 
-  func cancelDownload(_ otd: ObjectToDownload) {
-    if let download = activeDownloads[otd.refURL] {
-      download.task?.cancel()
-      activeDownloads[otd.refURL] = nil
+    func cancelDownload(_ otd: ObjectToDownload) {
+        if let download = activeDownloads[otd.refURL] {
+            download.task?.cancel()
+            activeDownloads[otd.refURL] = nil
+        }
     }
-  }
 
-  func resumeDownload(_ otd: ObjectToDownload) {
-    guard let download = activeDownloads[otd.refURL] else { return }
-    if let resumeData = download.resumeData {
-      download.task = downloadsSession.downloadTask(withResumeData: resumeData)
-    } else {
-      download.task = downloadsSession.downloadTask(with: download.otd.refURL)
+    func resumeDownload(_ otd: ObjectToDownload) {
+        guard let download = activeDownloads[otd.refURL] else { return }
+        if let resumeData = download.resumeData {
+            download.task = downloadsSession.downloadTask(withResumeData: resumeData)
+        } else {
+            download.task = downloadsSession.downloadTask(with: download.otd.refURL)
+        }
+        
+        download.task!.resume()
+        download.isDownloading = true
     }
-    download.task!.resume()
-    download.isDownloading = true
-  }
+}
+
+@objc extension DownloadService: URLSessionDownloadDelegate
+{
+    // Stores downloaded file
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL)
+    {
+        guard let sourceURL = downloadTask.originalRequest?.url else
+        {
+            return
+        }
+        
+        activeDownloads[sourceURL] = nil
+        
+        completionHandler?(location)
+    }
 }

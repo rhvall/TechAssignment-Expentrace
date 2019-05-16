@@ -54,7 +54,7 @@
 +(NSString *)loadCurrencyExchange:(NSURL *)url
                     baseCurrency:(NSString *)baseCurr
                       toCurrency:(NSString *)toCurr{
-    NSData *dta = [JSONParsing requestJSON:url];
+    NSData *dta = [JSONParsing syncRequestJSON:url];
     NSDictionary *dic = [JSONParsing parseJSONDictionary:dta];
     NSLog(@"Dic: %@", dic);
     NSLog(@"Key: %@", [dic objectForKey:toCurr]);

@@ -50,12 +50,12 @@ class Download {
   var progress: Float = 0
 }
 
-class ObjectToDownload {
+@objc class ObjectToDownload: NSObject {
     let name: String
     let refURL: URL
     var downloaded = false
     
-    init(name: String, refURL: URL) {
+    @objc init(name: String, refURL: URL) {
         self.name = name
         self.refURL = refURL
     }

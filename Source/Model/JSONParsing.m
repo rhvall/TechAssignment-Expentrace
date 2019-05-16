@@ -23,19 +23,39 @@
     dispatch_once(&onceToken, ^{
         ds = [[DownloadService alloc] init];
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-        [ds setDownloadsSessionWithSession:session];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:config
+                                                        delegate:ds
+                                                    delegateQueue:nil];
+        [ds setDownloadsSession:session];
     });
     
     return ds;
 }
 
-// This function does a simple URL request to the constant using Foundation's
-// method "NSData dataWithContentsOfURL", it is not the most efficient nor
-// best way to deal with network errors, but it is a shorcut given the alloted
-// time for this project
-+(NSData *)requestJSON:(NSURL *)baseURL {
-    return [NSData dataWithContentsOfURL:baseURL];
++(NSData *)syncRequestJSON:(NSURL *)baseURL {
+    // Where data is going to be stored after it is retrieved. It has a block
+    // to signal it is going to be used within a callback function
+    __block NSData *data = nil;
+    // Mechanish used to keep the "sync" part, in a "async" call
+    __block dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
+    
+    void (^complHdl)(NSURL *) = ^(NSURL *filePath) {
+        if (filePath != nil) {
+            data = [NSData dataWithContentsOfURL:baseURL];
+        }
+        dispatch_group_leave(group);
+    };
+    ObjectToDownload *otd = [[ObjectToDownload alloc] initWithName:@""
+                                                      refURL:baseURL];
+    [[JSONParsing downloadService] setCompletionHandler:complHdl];
+    [[JSONParsing downloadService] startDownload:otd];
+    
+    // if by 10 secs it has not returned, free the dispatch group.
+    dispatch_time_t t = dispatch_time(DISPATCH_TIME_NOW, 10000000000);
+    dispatch_group_wait(group, t);
+    
+    return data;
 }
 
 // Receives data in JSON format, and tries to parse it into a NSDictionary
