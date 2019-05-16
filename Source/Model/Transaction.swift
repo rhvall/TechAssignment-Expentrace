@@ -15,10 +15,10 @@ import Foundation
     @objc let tName: String
     @objc let tAddr: String
     @objc let tDate: String
-    @objc let tCats: [String]
+    @objc let tCats: [String]?
     
-    init(_ id: UInt, _ name: String, _ addr: String,
-        _ date: String, _ categories: [String]) {
+    @objc init(id: UInt, name: String, addr: String,
+        date: String, categories: [String]?) {
         self.tID = id
         self.tName = name
         self.tAddr = addr

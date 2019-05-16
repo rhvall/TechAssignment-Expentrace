@@ -30,12 +30,16 @@
     // We need to allocate
     _transactionsArray = [[NSMutableArray alloc] init];
     
-    // Selector was not compiling, so just making a placeholder block
-    void (^callback)(NSArray *) = ^(NSArray *elems) {
-        [self updateStoreElements:elems];
-    };
+    Transaction *tr = [[Transaction alloc] initWithId:0 name:@"nn" addr:@"jfaj" date:@"jfalkds" categories:nil];
+    NSArray *mm = @[tr];
     
-    [SummaryViewController loadDataFromServer:callback];
+    NSLog(@"MM: %@", mm);
+    
+    [FileMgmt persistWithObject:mm file:[Constants transactionsFile]];
+    
+    NSArray *ss = [FileMgmt retrieveFromFile:[Constants transactionsFile]];
+    
+    NSLog(@"SS: %@", ss);
 }
 
 // UITableViewDatasource
@@ -69,18 +73,6 @@ numberOfRowsInSection:(NSInteger)section
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     NSLog(@"title of cell %@", [_transactionsArray objectAtIndex:indexPath.row]);
-}
-
-+(void)loadDataFromServer:(void(^)(NSArray *))callWhenFinished {
-    // Test correct loading of the JSON file
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-    dispatch_async(queue, ^{
-        NSData *dta = [DownloadManager syncGetData:[Constants storesURL]];
-        NSArray *json = [JSONParsing parseJSONArray:dta];
-        if (callWhenFinished != nil) {
-            callWhenFinished(json);
-        }
-    });
 }
 
 // Given an array of elements, add them to the stores array property

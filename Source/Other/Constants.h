@@ -11,7 +11,7 @@
 @interface Constants : NSObject
 
 +(NSURL *)currencyLiveURL;
-+(NSURL *)storesURL;
++(NSString *)transactionsFile;
 +(NSString *)ratesKey;
 +(NSString *)usdKey;
 +(NSString *)nzdKey;
