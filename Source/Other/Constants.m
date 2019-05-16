@@ -23,6 +23,13 @@
     return @"TransactionsRecord";
 }
 
++(NSString *)encryptionPass {
+    // This password should not be a simple constant
+    // hardcoded here, next step would be to have
+    // this stored on keychain
+    return @"encryptionPass";
+}
+
 +(NSString *)usdKey {
     return @"USD";
 }

@@ -12,6 +12,7 @@
 
 +(NSURL *)currencyLiveURL;
 +(NSString *)transactionsFile;
++(NSString *)encryptionPass;
 +(NSString *)ratesKey;
 +(NSString *)usdKey;
 +(NSString *)nzdKey;
