@@ -6,14 +6,9 @@
 //  Copyright © 2019 R. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface JSONParsing : NSObject
-
-// This function does a URL request to the service using the baseURL parameter,
-// it is synchronous, so it will wait for the response to return in order to
-// give data back.
-+(NSData *)syncRequestJSON:(NSURL *)baseURL;
 
 // Receives data in JSON format, and tries to parse it into a NSArray
 +(NSArray *)parseJSONArray:(NSData *)jsonDta;

@@ -9,6 +9,7 @@
 #import "TransactionsViewController.h"
 #import "Constants.h"
 #import "JSONParsing.h"
+#import "DownloadManager.h"
 
 @interface TransactionsViewController ()
 
@@ -54,7 +55,7 @@
 +(NSString *)loadCurrencyExchange:(NSURL *)url
                     baseCurrency:(NSString *)baseCurr
                       toCurrency:(NSString *)toCurr{
-    NSData *dta = [JSONParsing syncRequestJSON:url];
+    NSData *dta = [DownloadManager syncGetData:url];
     NSDictionary *dic = [JSONParsing parseJSONDictionary:dta];
     NSLog(@"Dic: %@", dic);
     NSLog(@"Key: %@", [dic objectForKey:toCurr]);
