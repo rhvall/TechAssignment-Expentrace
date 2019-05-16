@@ -30,7 +30,12 @@
     // We need to allocate
     _transactionsArray = [[NSMutableArray alloc] init];
     
-    Transaction *tr = [[Transaction alloc] initWithId:0 name:@"nn" addr:@"jfaj" date:@"jfalkds" categories:nil];
+    Transaction *tr = [[Transaction alloc] initWithId:0
+                                                 name:@"nn"
+                                                price:29
+                                             currency:@"USD"
+                                                 date:@"20/20/2009"
+                                           categories:@[@""]];
     NSArray *mm = @[tr];
     
     NSLog(@"MM: %@", mm);

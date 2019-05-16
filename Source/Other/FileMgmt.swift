@@ -40,8 +40,6 @@ import Foundation
             return nil
         }
         
-        encryptionTest()
-        
         return preferences
     }
     
