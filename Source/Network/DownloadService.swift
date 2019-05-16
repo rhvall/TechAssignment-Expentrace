@@ -35,11 +35,15 @@ import Foundation
 
 // Downloads song snippets, and stores in local file.
 // Allows cancel, pause, resume download.
-class DownloadService {
+@objc class DownloadService: NSObject {
 
   // SearchViewController creates downloadsSession
   var downloadsSession: URLSession!
   var activeDownloads: [URL: Download] = [:]
+    
+    @objc func setDownloadsSession(session: URLSession) {
+        self.downloadsSession = session
+    }
 
   // MARK: - Download methods called by ObjectToDownloadCell delegate methods
 
@@ -83,5 +87,4 @@ class DownloadService {
     download.task!.resume()
     download.isDownloading = true
   }
-
 }

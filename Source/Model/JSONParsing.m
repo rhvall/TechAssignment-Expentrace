@@ -8,12 +8,27 @@
 
 #import "JSONParsing.h"
 #import "Constants.h"
+#import "Expentrace-Swift.h"
 
 @interface JSONParsing ()
 
 @end
 
 @implementation JSONParsing
+
++(DownloadService *)downloadService {
+    static DownloadService *ds = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        ds = [[DownloadService alloc] init];
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+        [ds setDownloadsSessionWithSession:session];
+    });
+    
+    return ds;
+}
 
 // This function does a simple URL request to the constant using Foundation's
 // method "NSData dataWithContentsOfURL", it is not the most efficient nor
