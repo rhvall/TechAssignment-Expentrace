@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00BE48260BEB3514914E1E4C /* Pods_Expentrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDF542CB400DA222430945B /* Pods_Expentrace.framework */; };
 		2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CC228CDCEC00B1D49C /* DownloadService.swift */; };
 		2C4667CF228CDE6700B1D49C /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CE228CDE6700B1D49C /* Download.swift */; };
 		2C4667D1228CE22900B1D49C /* FileMgmt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667D0228CE22900B1D49C /* FileMgmt.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BAEE93845A100F42FFDD226 /* Pods-Expentrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expentrace.debug.xcconfig"; path = "Target Support Files/Pods-Expentrace/Pods-Expentrace.debug.xcconfig"; sourceTree = "<group>"; };
 		2C4667CC228CDCEC00B1D49C /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		2C4667CE228CDE6700B1D49C /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		2C4667D0228CE22900B1D49C /* FileMgmt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMgmt.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		2C847B74227EE74900D46B86 /* JSONParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParsing.m; sourceTree = "<group>"; };
 		2CFE97262284106F00FDA56E /* Expentrace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expentrace-Bridging-Header.h"; sourceTree = "<group>"; };
 		2CFE97292284116600FDA56E /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		974D7D94A36AF96DBDFEC892 /* Pods-Expentrace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expentrace.release.xcconfig"; path = "Target Support Files/Pods-Expentrace/Pods-Expentrace.release.xcconfig"; sourceTree = "<group>"; };
+		CDDF542CB400DA222430945B /* Pods_Expentrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expentrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BE48260BEB3514914E1E4C /* Pods_Expentrace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				2C847B33227ECB7A00D46B86 /* Base.lproj */,
 				2C847B31227ECB5800D46B86 /* Source */,
 				2C847B0B227ECAB100D46B86 /* Products */,
+				AD8C38C59216D5F9DCC25B17 /* Pods */,
+				445D98485861E01FBECF8B04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +165,24 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		445D98485861E01FBECF8B04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF542CB400DA222430945B /* Pods_Expentrace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD8C38C59216D5F9DCC25B17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BAEE93845A100F42FFDD226 /* Pods-Expentrace.debug.xcconfig */,
+				974D7D94A36AF96DBDFEC892 /* Pods-Expentrace.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C847B23227ECAB200D46B86 /* Build configuration list for PBXNativeTarget "Expentrace" */;
 			buildPhases = (
+				6BE266797AE77EE2B366ECD3 /* [CP] Check Pods Manifest.lock */,
 				2C847B06227ECAB100D46B86 /* Sources */,
 				2C847B07227ECAB100D46B86 /* Frameworks */,
 				2C847B08227ECAB100D46B86 /* Resources */,
+				FAF7FDE03214A1DF570EF306 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +250,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BE266797AE77EE2B366ECD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Expentrace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAF7FDE03214A1DF570EF306 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Expentrace/Pods-Expentrace-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Expentrace/Pods-Expentrace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C847B06227ECAB100D46B86 /* Sources */ = {
@@ -380,6 +454,7 @@
 		};
 		2C847B24227ECAB200D46B86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BAEE93845A100F42FFDD226 /* Pods-Expentrace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -400,6 +475,7 @@
 		};
 		2C847B25227ECAB200D46B86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974D7D94A36AF96DBDFEC892 /* Pods-Expentrace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
