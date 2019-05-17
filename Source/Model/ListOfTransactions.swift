@@ -13,28 +13,39 @@ import Foundation
 // a file
 @objc class ListOfTransactions : NSObject
 {
-    @objc static let allTransactions = ListOfTransactions()
+    @objc static let sharedTransactions = ListOfTransactions()
     
     private var transactions: [Transaction]
     
     override private init() {
-        if let tran = FileMgmt.retrieveFrom(file: Constants.transactionsFile()) {
-            self.transactions = tran
-        }
-        else {
-            self.transactions = []
-        }
+        self.transactions = ListOfTransactions.loadTransactions()
+        super.init()
     }
     
     func addTransaction(tr: Transaction) {
-    
+        transactions.append(tr)
     }
     
     func removeTransaction(tr: Transaction) {
-        
+        if let index = transactions.firstIndex(of: tr) {
+            transactions.remove(at: index)
+        }
     }
     
-    func persistTransactions(tr: Transaction) {
-        
+    @objc func getTransactions() -> [Transaction] {
+        return transactions
+    }
+    
+    @objc func persistTransactions() {
+        FileMgmt.persist(object: transactions, file: Constants.transactionsFile())
+    }
+    
+    static func loadTransactions() -> [Transaction] {
+        if let tran = FileMgmt.retrieveFrom(file: Constants.transactionsFile()) {
+            return tran
+        }
+        else {
+            return []
+        }
     }
 }

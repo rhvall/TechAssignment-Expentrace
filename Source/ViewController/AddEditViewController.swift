@@ -113,5 +113,7 @@ class AddEditViewController: FormViewController {
                                currency: curr,
                                date: strDate,
                                categories: [cat])
+        
+        ListOfTransactions.sharedTransactions.addTransaction(tr: tran)
     }
 }
