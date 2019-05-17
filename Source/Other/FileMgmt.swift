@@ -10,7 +10,7 @@ import Foundation
 
 /// This class helps to abstract the reading/writing of files
 /// to flash memory.
-// Biiiig NOTE!! At the moment, the salt and IV vector innitialization
+// Biiiig NOTE!! At the moment, the salt and Innitialization Vector
 // is stored within the same file, which is NOT a solution, those
 // values should be stored in a different and more secure place.
 @objc class FileMgmt: NSObject
@@ -39,8 +39,6 @@ import Foundation
         else {
             return nil
         }
-        
-        encryptionTest()
         
         return preferences
     }
