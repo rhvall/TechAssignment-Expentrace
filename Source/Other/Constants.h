@@ -14,6 +14,7 @@
 +(NSString *)transactionsFile;
 +(NSString *)encryptionPass;
 +(NSString *)ratesKey;
++(NSArray *)supportedCurrencies;
 +(NSString *)usdKey;
 +(NSString *)nzdKey;
 

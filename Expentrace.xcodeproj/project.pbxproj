@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00BE48260BEB3514914E1E4C /* Pods_Expentrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDF542CB400DA222430945B /* Pods_Expentrace.framework */; };
+		2C17C94E228E61C700493C90 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17C94D228E61C700493C90 /* AddEditViewController.swift */; };
+		2C17C950228E7B1B00493C90 /* ListOfTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C17C94F228E7B1B00493C90 /* ListOfTransactions.swift */; };
 		2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CC228CDCEC00B1D49C /* DownloadService.swift */; };
 		2C4667CF228CDE6700B1D49C /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667CE228CDE6700B1D49C /* Download.swift */; };
 		2C4667D1228CE22900B1D49C /* FileMgmt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4667D0228CE22900B1D49C /* FileMgmt.swift */; };
@@ -20,13 +22,14 @@
 		2C847B67227ECF7900D46B86 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B61227ECF7900D46B86 /* Constants.m */; };
 		2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */; };
 		2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */; };
-		2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B70227ED45F00D46B86 /* AddEditViewController.m */; };
 		2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C847B74227EE74900D46B86 /* JSONParsing.m */; };
 		2CFE972A2284116600FDA56E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE97292284116600FDA56E /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BAEE93845A100F42FFDD226 /* Pods-Expentrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expentrace.debug.xcconfig"; path = "Target Support Files/Pods-Expentrace/Pods-Expentrace.debug.xcconfig"; sourceTree = "<group>"; };
+		2C17C94D228E61C700493C90 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		2C17C94F228E7B1B00493C90 /* ListOfTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTransactions.swift; sourceTree = "<group>"; };
 		2C4667CC228CDCEC00B1D49C /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		2C4667CE228CDE6700B1D49C /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		2C4667D0228CE22900B1D49C /* FileMgmt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMgmt.swift; sourceTree = "<group>"; };
@@ -44,10 +47,8 @@
 		2C847B64227ECF7900D46B86 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2C847B6A227ED0CB00D46B86 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
 		2C847B6B227ED0CB00D46B86 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
-		2C847B6D227ED45F00D46B86 /* AddEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditViewController.h; sourceTree = "<group>"; };
 		2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewController.m; sourceTree = "<group>"; };
 		2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsViewController.h; sourceTree = "<group>"; };
-		2C847B70227ED45F00D46B86 /* AddEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditViewController.m; sourceTree = "<group>"; };
 		2C847B73227EE74900D46B86 /* JSONParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParsing.h; sourceTree = "<group>"; };
 		2C847B74227EE74900D46B86 /* JSONParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParsing.m; sourceTree = "<group>"; };
 		2CFE97262284106F00FDA56E /* Expentrace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expentrace-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -127,8 +128,7 @@
 		2C847B42227ECEBC00D46B86 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2C847B6D227ED45F00D46B86 /* AddEditViewController.h */,
-				2C847B70227ED45F00D46B86 /* AddEditViewController.m */,
+				2C17C94D228E61C700493C90 /* AddEditViewController.swift */,
 				2C847B6F227ED45F00D46B86 /* TransactionsViewController.h */,
 				2C847B6E227ED45F00D46B86 /* TransactionsViewController.m */,
 				2C847B6B227ED0CB00D46B86 /* SummaryViewController.h */,
@@ -144,6 +144,7 @@
 				2CFE97292284116600FDA56E /* Transaction.swift */,
 				2C847B73227EE74900D46B86 /* JSONParsing.h */,
 				2C847B74227EE74900D46B86 /* JSONParsing.m */,
+				2C17C94F228E7B1B00493C90 /* ListOfTransactions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,7 +180,6 @@
 				0BAEE93845A100F42FFDD226 /* Pods-Expentrace.debug.xcconfig */,
 				974D7D94A36AF96DBDFEC892 /* Pods-Expentrace.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -306,12 +306,13 @@
 				2C4667D1228CE22900B1D49C /* FileMgmt.swift in Sources */,
 				2C847B2E227ECB5100D46B86 /* AppDelegate.m in Sources */,
 				2C847B2F227ECB5100D46B86 /* main.m in Sources */,
+				2C17C950228E7B1B00493C90 /* ListOfTransactions.swift in Sources */,
 				2C4667CF228CDE6700B1D49C /* Download.swift in Sources */,
 				2C4667D3228D347E00B1D49C /* DownloadManager.m in Sources */,
 				2C847B75227EE74900D46B86 /* JSONParsing.m in Sources */,
-				2C847B72227ED45F00D46B86 /* AddEditViewController.m in Sources */,
 				2C847B67227ECF7900D46B86 /* Constants.m in Sources */,
 				2C4667CD228CDCEC00B1D49C /* DownloadService.swift in Sources */,
+				2C17C94E228E61C700493C90 /* AddEditViewController.swift in Sources */,
 				2CFE972A2284116600FDA56E /* Transaction.swift in Sources */,
 				2C847B6C227ED0CB00D46B86 /* SummaryViewController.m in Sources */,
 				2C847B71227ED45F00D46B86 /* TransactionsViewController.m in Sources */,

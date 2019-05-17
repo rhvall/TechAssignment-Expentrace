@@ -30,6 +30,10 @@
     return @"encryptionPass";
 }
 
++(NSArray *)supportedCurrencies {
+    return @[[self usdKey], [self nzdKey]];
+}
+
 +(NSString *)usdKey {
     return @"USD";
 }
